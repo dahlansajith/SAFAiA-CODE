@@ -18,6 +18,7 @@ function convert() {
         // If input is letters
         result = lettersToNumber(input);
         result = Math.floor(result / 2); // Divide by 2 for letter input
+        result = formatNumberWithCommas(result); // Add commas to the result
     } else {
         // If input is numbers
         result = numbersToLetters(input);
@@ -52,4 +53,8 @@ function numbersToLetters(numbers) {
         }
     }
     return result;
+}
+
+function formatNumberWithCommas(number) {
+    return number.toLocaleString(); // Formats the number with commas
 }
